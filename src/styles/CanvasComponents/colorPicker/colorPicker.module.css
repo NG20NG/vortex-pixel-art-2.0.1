@@ -1,0 +1,67 @@
+.colorPickerContainer {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 110px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bgColorLight);
+  border-radius: 5px;
+  padding: 7px;
+  z-index: 55;
+}
+.inputRangeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.currentColor {
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+}
+/*======================*/
+.slider {
+  -webkit-appearance: none;
+  width: 80%;
+  height: auto;
+  background-color: #d3d3d36e;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 2px;
+  position: relative;
+}
+.slider::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: linear-gradient(to left, black, transparent); */
+}
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 7px;
+  height: 15px;
+  background: #00a259;
+  cursor: pointer;
+  border-radius: 2px;
+  opacity: 1;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04aa6d;
+  cursor: pointer;
+}
