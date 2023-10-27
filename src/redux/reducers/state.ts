@@ -49,6 +49,10 @@ const stateSlice = createSlice({
       state.isColorPicker = !payload ? false : !state.isColorPicker;
     },
     //
+    setIsGridOn: (state) => {
+      state.isGridOn = !state.isGridOn;
+    },
+    //
     setCurrentTool: (state, { payload }: PayloadAction<string>) => {
       state.currentTool = payload;
     },
@@ -62,6 +66,11 @@ const stateSlice = createSlice({
 //
 //
 //
-export const { setAll, setIsColorPicker, setCurrentTool, setCurrentColor } =
-  stateSlice.actions;
+export const {
+  setAll,
+  setIsColorPicker,
+  setIsGridOn,
+  setCurrentTool,
+  setCurrentColor,
+} = stateSlice.actions;
 export default stateSlice.reducer;

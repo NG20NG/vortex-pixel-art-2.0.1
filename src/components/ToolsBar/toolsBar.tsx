@@ -1,8 +1,6 @@
 //
 import t from "@/style/CanvasComponents/ToolsBar/toolsBar.module.css";
-
 //
-
 //
 import { TButton } from "./toolsButtons";
 //

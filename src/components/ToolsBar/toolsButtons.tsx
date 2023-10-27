@@ -2,8 +2,6 @@
 //
 import { useCurrent } from "@/hooks/useCurrent";
 import tb from "@/style/CanvasComponents/ToolsBar/toolsButtons.module.css";
-
-//
 //
 //
 //
@@ -25,9 +23,8 @@ export const TButton = ({ icon, tool }: TButtonType) => {
 //
 //
 //
-const GetIcon = ({ icon }: Icon) => {
+const GetIcon = ({ icon }: { icon: string }) => {
   return <img className={tb.TButtonIcon} src={icon} alt="tool icon button" />;
 };
 //
 //
-type Icon = { icon?: string };

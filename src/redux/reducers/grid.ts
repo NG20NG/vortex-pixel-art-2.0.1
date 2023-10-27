@@ -6,7 +6,7 @@ import { GridType } from "../types/gridTypes";
 //
 const initialState: GridType = {
   canvasSize: 4,
-  gridSize: 500,
+  gridSize: 400,
 };
 //
 //

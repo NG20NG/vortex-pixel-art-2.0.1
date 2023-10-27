@@ -11,7 +11,7 @@ import CustomInput from "./customInput";
 const ColorPicker = () => {
   const { isColorPicker } = useStoreState();
   const { setColor } = useCurrent();
-  const [hsva, setHsva] = useState({ h: 214, s: 43, v: 90, a: 1 });
+  const [hsva, setHsva] = useState({ h: 0, s: 0, v: 100, a: 1 });
   useEffect(() => {
     setColor(toRgba(hsva));
   }, [hsva]);

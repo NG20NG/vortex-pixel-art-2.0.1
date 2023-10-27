@@ -7,9 +7,10 @@
 //
 import ToolsBar from "@/components/ToolsBar/toolsBar";
 import ColorPicker from "@/components/colorPicker/colorPickerContainer";
-import Canvas from "@/components/canvas/canvasLayout";
+import CanvasLayout from "@/components/canvas/canvasLayout";
 //
 import { useEffect, useRef } from "react";
+import FunctionBar from "./FunctionsBar/functionBar";
 
 const Index = () => {
   const ref = useRef<HTMLCanvasElement>(null);
@@ -22,7 +23,8 @@ const Index = () => {
   }, [scrollRef]);
   return (
     <>
-      <Canvas canvasRef={ref} scrollRef={scrollRef} />
+      <CanvasLayout canvasRef={ref} scrollRef={scrollRef} />
+      <FunctionBar />
       <ColorPicker />
       <ToolsBar />
     </>

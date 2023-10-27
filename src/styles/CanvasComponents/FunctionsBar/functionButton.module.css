@@ -7,11 +7,12 @@
   cursor: pointer;
   background-color: transparent;
   transition: background-color 0.1s;
+  z-index: 55;
 }
 .FButton:hover {
   background-color: var(--selectedButton);
 }
 .FButtonIcons {
-  width: 75%;
   height: 75%;
+  width: 75%;
 }

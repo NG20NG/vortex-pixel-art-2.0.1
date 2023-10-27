@@ -1,25 +1,21 @@
 //
-import c from "@/style/CanvasComponents/Canvas/canvas.module.css";
-import { useColorPicker } from "@/hooks/useColorPicker";
+import c from "@/style/CanvasComponents/Canvas/canvasLayout.module.css";
+import { useColorPicker } from "@/hooks/useIsOn";
 import Grid from "../canvasGrid/grid";
 import { RefObject, forwardRef } from "react";
+import Canvas from "./canvas";
 //
 type A = {
   canvasRef: RefObject<HTMLCanvasElement>;
   scrollRef: RefObject<HTMLDivElement>;
 };
-const Canvas = ({ canvasRef, scrollRef }: A, _ref: any) => {
+const CanvasLayout = ({ canvasRef, scrollRef }: A, _ref: any) => {
   const setColorPicker = useColorPicker();
   return (
-    <div
-      className={c.canvas}
-      onClick={() => {
-        setColorPicker(false);
-        console.log(123);
-      }}
-    >
+    <div className={c.canvasLayout} onClick={() => setColorPicker(false)}>
       <div className={c.field} ref={scrollRef}>
         <div className={c.contentContainer}>
+          <Canvas canvasRef={canvasRef} />
           <Grid />
         </div>
       </div>
@@ -27,4 +23,4 @@ const Canvas = ({ canvasRef, scrollRef }: A, _ref: any) => {
   );
 };
 
-export default forwardRef(Canvas);
+export default forwardRef(CanvasLayout);

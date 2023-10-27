@@ -2,7 +2,7 @@
 import tb from "@/style/CanvasComponents/ToolsBar/toolsButtons.module.css";
 import cp from "@/style/CanvasComponents/ToolsBar/colorPickerButton.module.css";
 //
-import { useColorPicker } from "@/hooks/useColorPicker";
+import { useColorPicker } from "@/hooks/useIsOn";
 //
 //
 //
